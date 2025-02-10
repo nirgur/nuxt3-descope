@@ -9,5 +9,5 @@ export default defineNuxtConfig({
     compilerOptions: {
       isCustomElement: tag => tag === 'descope-wc'
     }
-  },
+  }
 })

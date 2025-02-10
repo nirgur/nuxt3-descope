@@ -5,8 +5,6 @@ const DescopeClient = defineAsyncComponent(() => import('@descope/vue-sdk').then
 
 <template>
   <div>
-    <client-only>
       <DescopeClient flowId="sign-in" />
-    </client-only>
   </div>
 </template>

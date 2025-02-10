@@ -1,28 +1,41 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Minimal Starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install dependencies:
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
 
 # pnpm
-pnpm install --shamefully-hoist
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
 ## Production
@@ -30,57 +43,33 @@ npm run dev
 Build the application for production:
 
 ```bash
+# npm
 npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
 Locally preview production build:
 
 ```bash
+# npm
 npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
-
-## Using Nuxi CLI
-
-```bash
-# Home page in index.vue file:
-npm nuxi add page index
-# More complex dynamic route:
-npm nuxi add page teams/[teamSlug]/users/[userId]
-```
-
-### Disable Transition
-
-You can disable page transition using [definePageMeta](https://v3.nuxtjs.org/api/utils/define-page-meta/) option, this will allow to use multiple root-element in the same page.
-
-```js
-definePageMeta({
-  pageTransition: false,
-})
-```
-
-### useAsyncData + $fetch
-
-A shorthand to use both useAsyncData + $fetch is by using useFetch:
-
-```js
-// Fetching data asynchronously (you must provide a unique key to useAsyncData, like an ID...)
-const { data } = await useAsyncData(
-  `/posts/${route.params.id}`,
-  () => {
-    return $fetch(`${URL}/posts/${route.params.id}`);
-  },
-  {
-    // simple way to pick only what you need
-    pick: ['id', 'title', 'body'],
-    // Transform fetched data (e.g. grab only necessary informations)
-    //    transform(data) {
-    //      return {
-    //        title: data.title,
-    //        body: data.body,
-    //      };
-    //    },
-  }
-);
-```
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -10,4 +10,15 @@ export default defineNuxtConfig({
       isCustomElement: tag => tag === 'descope-wc'
     }
   },
+  vite: {
+    plugins: [
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag.startsWith('descope-'),
+          },
+        },
+      }),
+    ],
+  },
 })
